@@ -25,12 +25,50 @@
     />
   </head>
   <body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <div class="container top-bar-container">
+        <div class="top-bar-left">
+          <div class="top-bar-item">
+            <i class="fas fa-phone"></i>
+            <span>+977 1234567890</span>
+          </div>
+          <div class="top-bar-item">
+            <i class="fas fa-clock"></i>
+            <span>Sunday - Saturday: 6:00 AM - 6:00 PM</span>
+          </div>
+        </div>
+        <div class="top-bar-right">
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a
+            href="https://tiktok.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fab fa-tiktok"></i>
+          </a>
+        </div>
+      </div>
+    </div>
     <!-- Navigation -->
     <nav class="navbar">
       <div class="container nav-container">
         <div class="logo">
           <i class="fas fa-car"></i>
-          <span>Creation Driving School</span>
+          <span>Shah Motor Driving School</span>
         </div>
         <ul class="nav-menu">
           <li><a href="#home" class="nav-link">Home</a></li>
@@ -39,6 +77,7 @@
           <li><a href="#testimonials" class="nav-link">Reviews</a></li>
           <li><a href="#gallery" class="nav-link">Gallery</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li><a href="#map" class="nav-link">Location</a></li>
         </ul>
         <div class="hamburger">
           <span></span>
@@ -93,7 +132,9 @@
           timing and affordable packages.
         </p>
         <div class="hero-buttons">
-          <a href="#contact" class="btn btn-primary">Get Started</a>
+          <a href="#map" class="btn btn-primary">
+            <i class="fas fa-map-marker-alt"></i> Location
+          </a>
           <button class="btn btn-video" id="watchVideoBtn">
             <i class="fas fa-play"></i> Watch Video
           </button>
@@ -151,8 +192,6 @@
     <section id="packages" class="packages">
       <div class="container">
         <h2 class="section-title text-center">Time Packages</h2>
-        <p class="section-subtitle">Choose the package that suits your needs</p>
-
         <div class="table-container">
           <table class="pricing-table">
             <thead>
@@ -391,10 +430,29 @@
       </div>
     </section>
 
+    <!-- Map Section -->
+    <section id="map" class="map-section">
+      <div class="container">
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14133.976201915886!2d85.34463115!3d27.67112125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19f829ea7927%3A0x79f8f157cea60e2a!2sShah%20Motor%20Driving%20School!5e0!3m2!1sen!2snp!4v1764438611943!5m2!1sen!2snp"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Creation Driving School Location"
+          >
+          </iframe>
+        </div>
+      </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
-        <p>&copy; 2024 Creation Driving School. All rights reserved.</p>
+        <p>&copy; 2024 Shah Motor Driving School. All rights reserved.</p>
         <div class="social-links">
           <a href="#"><i class="fab fa-facebook"></i></a>
           <a href="#"><i class="fab fa-twitter"></i></a>
