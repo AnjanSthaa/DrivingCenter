@@ -1,52 +1,402 @@
-<!-- Hero Section -->
-<section id="home" class="hero">
-  <div class="hero-carousel">
-    <div
-      class="hero-slide active"
-      style="
-        background-image: url('https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=1920&q=80');
-      "
-    ></div>
-    <div
-      class="hero-slide"
-      style="
-        background-image: url('https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=1920&q=80');
-      "
-    ></div>
-    <div
-      class="hero-slide"
-      style="
-        background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=80');
-      "
-    ></div>
-    <div
-      class="hero-slide"
-      style="
-        background-image: url('https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=1920&q=80');
-      "
-    ></div>
-    <div
-      class="hero-slide"
-      style="
-        background-image: url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1920&q=80');
-      "
-    ></div>
-  </div>
-  <div class="hero-overlay"></div>
-  <div class="container hero-content">
-    <h1 class="hero-title">
-      Welcome To<br /><span>Creation Driving School</span>
-    </h1>
-    <p class="hero-text">
-      Learn to drive safely with experienced instructors. We provide
-      comprehensive training for cars, bikes, and scooters with flexible timing
-      and affordable packages.
-    </p>
-    <div class="hero-buttons">
-      <a href="#contact" class="btn btn-primary">Get Started</a>
-      <a href="#video" class="btn btn-video"
-        ><i class="fas fa-play"></i> Watch Video</a
-      >
-    </div>
-  </div>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"
+    />
+    <meta
+      name="description"
+      content="Learn to drive safely with Creation Driving School. Professional instructors, flexible timing, and affordable packages for cars, bikes, and scooters."
+    />
+    <meta name="theme-color" content="#2563eb" />
+    <title>Creation Driving School - Learn to Drive Safely</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="container nav-container">
+        <div class="logo">
+          <i class="fas fa-car"></i>
+          <span>Creation Driving School</span>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#packages" class="nav-link">Packages</a></li>
+          <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+          <li><a href="#gallery" class="nav-link">Gallery</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <h1 class="hero-title">
+          Welcome To<br /><span>Creation Driving School</span>
+        </h1>
+        <p class="hero-text">
+          Learn to drive safely with experienced instructors. We provide
+          comprehensive training for cars, bikes, and scooters with flexible
+          timing and affordable packages.
+        </p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary">Get Started</a>
+          <a href="#video" class="btn btn-video"
+            ><i class="fas fa-play"></i> Watch Video</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video" class="video-section">
+      <div class="container">
+        <h2 class="section-title text-center">See Us In Action</h2>
+        <p class="section-subtitle">
+          Watch our training sessions and learn more about our institute
+        </p>
+        <div class="video-container">
+          <iframe
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="Creation Driving School Video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          >
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Carousel Section -->
+    <section class="carousel-section">
+      <div class="container">
+        <h2 class="section-title text-center">Our Institute</h2>
+        <p class="section-subtitle">
+          Take a glimpse into our training facilities
+        </p>
+
+        <div class="carousel-container">
+          <div class="carousel-wrapper">
+            <div class="carousel-slide active">
+              <img src="carousel1.jpg" alt="Driving School Image 1" />
+            </div>
+            <div class="carousel-slide">
+              <img src="carousel2.jpg" alt="Driving School Image 2" />
+            </div>
+            <div class="carousel-slide">
+              <img src="carousel3.jpg" alt="Driving School Image 3" />
+            </div>
+            <div class="carousel-slide">
+              <img src="carousel4.jpg" alt="Driving School Image 4" />
+            </div>
+            <div class="carousel-slide">
+              <img src="carousel5.jpg" alt="Driving School Image 5" />
+            </div>
+          </div>
+
+          <button
+            class="carousel-btn carousel-prev"
+            aria-label="Previous slide"
+          >
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="carousel-btn carousel-next" aria-label="Next slide">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+
+          <div class="carousel-dots"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-image">
+            <img
+              src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&q=80"
+              alt="Professional driving instruction"
+            />
+          </div>
+          <div class="about-content">
+            <h2 class="section-title">A Premium Driving Institute</h2>
+            <p>
+              We are dedicated to providing quality driving education with
+              experienced instructors and modern training vehicles. Our
+              comprehensive courses ensure you become a confident and safe
+              driver.
+            </p>
+
+            <div class="features">
+              <div class="feature">
+                <i class="fas fa-certificate"></i>
+                <div>
+                  <h3>Expert Driving Instructor</h3>
+                  <p>
+                    Learn from certified professionals with years of experience
+                    in driver training and road safety.
+                  </p>
+                </div>
+              </div>
+              <div class="feature">
+                <i class="fas fa-dollar-sign"></i>
+                <div>
+                  <h3>Great Value For Money</h3>
+                  <p>
+                    Affordable packages designed to fit your budget without
+                    compromising on quality training.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages" class="packages">
+      <div class="container">
+        <h2 class="section-title text-center">Time Packages</h2>
+        <p class="section-subtitle">Choose the package that suits your needs</p>
+
+        <div class="table-container">
+          <table class="pricing-table">
+            <thead>
+              <tr>
+                <th>Course</th>
+                <th>Time</th>
+                <th>Rate</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td rowspan="2"><strong>Car</strong></td>
+                <td>1 Hour (Own Vehicle)</td>
+                <td>Rs 500</td>
+              </tr>
+              <tr>
+                <td>1 Hour (Institute Vehicle)</td>
+                <td>Rs 1600</td>
+              </tr>
+              <tr>
+                <td rowspan="2"><strong>Bike</strong></td>
+                <td>1 Hour (Own Vehicle)</td>
+                <td>Rs 200</td>
+              </tr>
+              <tr>
+                <td>1 Hour (Institute Vehicle)</td>
+                <td>Rs 600</td>
+              </tr>
+              <tr>
+                <td rowspan="2"><strong>Scooter</strong></td>
+                <td>1 Hour (Own Vehicle)</td>
+                <td>Rs 200</td>
+              </tr>
+              <tr>
+                <td>1 Hour (Institute Vehicle)</td>
+                <td>Rs 600</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+      <div class="container">
+        <h2 class="section-title text-center">What they're saying about us</h2>
+        <p class="section-subtitle">Hear from our satisfied students</p>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-image">
+              <img src="https://i.pravatar.cc/150?img=1" alt="Student" />
+            </div>
+            <p class="testimonial-text">
+              Excellent driving school! The instructors are patient and
+              professional. I passed my driving test on the first attempt thanks
+              to their thorough training.
+            </p>
+            <h4 class="testimonial-name">Jena Karlis</h4>
+            <p class="testimonial-role">Instructor</p>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-image">
+              <img src="https://i.pravatar.cc/150?img=13" alt="Student" />
+            </div>
+            <p class="testimonial-text">
+              Great experience learning to drive here. The flexible timings and
+              affordable rates made it perfect for my schedule. Highly
+              recommended!
+            </p>
+            <h4 class="testimonial-name">Robin Ted</h4>
+            <p class="testimonial-role">Entrepreneur</p>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-image">
+              <img src="https://i.pravatar.cc/150?img=12" alt="Student" />
+            </div>
+            <p class="testimonial-text">
+              Professional instructors who focus on safety and confidence
+              building. The institute vehicles are well-maintained. Worth every
+              rupee!
+            </p>
+            <h4 class="testimonial-name">John Larsson</h4>
+            <p class="testimonial-role">Developer</p>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-image">
+              <img src="https://i.pravatar.cc/150?img=5" alt="Student" />
+            </div>
+            <p class="testimonial-text">
+              I was nervous about driving, but the instructors made me feel
+              comfortable. Their teaching methods are effective and easy to
+              understand.
+            </p>
+            <h4 class="testimonial-name">Baskin Robbins</h4>
+            <p class="testimonial-role">Designer</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+      <div class="container">
+        <h2 class="section-title text-center">Gallery</h2>
+        <p class="section-subtitle">Some photos from our institute</p>
+
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img
+              src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=600&q=80"
+              alt="In-car driving lesson"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=600&q=80"
+              alt="Modern training vehicle"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80"
+              alt="Motorcycle training session"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=600&q=80"
+              alt="Professional training car"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=600&q=80"
+              alt="Road training practice"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=600&q=80"
+              alt="Student learning to drive"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section-title text-center">Contact Us</h2>
+
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h3>Location</h3>
+                <p>
+                  Tinkune, Near VS Niketan College, Kathmandu<br />
+                  Lokanthali, Manohara Planning near Eye Hospital
+                </p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <i class="fas fa-clock"></i>
+              <div>
+                <h3>Open Hours</h3>
+                <p>Sunday - Saturday: 6:00 AM - 6:00 PM</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <h3>Phone</h3>
+                <p>+977 1234567890</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form">
+            <input type="text" placeholder="Your Name" class="form-input" />
+            <input type="email" placeholder="Your Email" class="form-input" />
+            <input type="text" placeholder="Subject" class="form-input" />
+            <textarea
+              placeholder="Message"
+              rows="5"
+              class="form-input"
+            ></textarea>
+            <button class="btn btn-primary">Send Message</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2024 Creation Driving School. All rights reserved.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
