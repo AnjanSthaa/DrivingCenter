@@ -36,7 +36,7 @@
           <li><a href="#home" class="nav-link">Home</a></li>
           <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#packages" class="nav-link">Packages</a></li>
-          <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+          <li><a href="#testimonials" class="nav-link">Reviews</a></li>
           <li><a href="#gallery" class="nav-link">Gallery</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
@@ -50,6 +50,38 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+      <div class="hero-carousel">
+        <div
+          class="hero-slide active"
+          style="
+            background-image: url('https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=1920&q=80');
+          "
+        ></div>
+        <div
+          class="hero-slide"
+          style="
+            background-image: url('https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=1920&q=80');
+          "
+        ></div>
+        <div
+          class="hero-slide"
+          style="
+            background-image: url('https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=1920&q=80');
+          "
+        ></div>
+        <div
+          class="hero-slide"
+          style="
+            background-image: url('https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=1920&q=80');
+          "
+        ></div>
+        <div
+          class="hero-slide"
+          style="
+            background-image: url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1920&q=80');
+          "
+        ></div>
+      </div>
       <div class="hero-overlay"></div>
       <div class="container hero-content">
         <h1 class="hero-title">
@@ -62,71 +94,9 @@
         </p>
         <div class="hero-buttons">
           <a href="#contact" class="btn btn-primary">Get Started</a>
-          <a href="#video" class="btn btn-video"
-            ><i class="fas fa-play"></i> Watch Video</a
-          >
-        </div>
-      </div>
-    </section>
-
-    <!-- Video Section -->
-    <section id="video" class="video-section">
-      <div class="container">
-        <h2 class="section-title text-center">See Us In Action</h2>
-        <p class="section-subtitle">
-          Watch our training sessions and learn more about our institute
-        </p>
-        <div class="video-container">
-          <iframe
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-            title="Creation Driving School Video"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          >
-          </iframe>
-        </div>
-      </div>
-    </section>
-
-    <!-- Carousel Section -->
-    <section class="carousel-section">
-      <div class="container">
-        <h2 class="section-title text-center">Our Institute</h2>
-        <p class="section-subtitle">
-          Take a glimpse into our training facilities
-        </p>
-
-        <div class="carousel-container">
-          <div class="carousel-wrapper">
-            <div class="carousel-slide active">
-              <img src="carousel1.jpg" alt="Driving School Image 1" />
-            </div>
-            <div class="carousel-slide">
-              <img src="carousel2.jpg" alt="Driving School Image 2" />
-            </div>
-            <div class="carousel-slide">
-              <img src="carousel3.jpg" alt="Driving School Image 3" />
-            </div>
-            <div class="carousel-slide">
-              <img src="carousel4.jpg" alt="Driving School Image 4" />
-            </div>
-            <div class="carousel-slide">
-              <img src="carousel5.jpg" alt="Driving School Image 5" />
-            </div>
-          </div>
-
-          <button
-            class="carousel-btn carousel-prev"
-            aria-label="Previous slide"
-          >
-            <i class="fas fa-chevron-left"></i>
+          <button class="btn btn-video" id="watchVideoBtn">
+            <i class="fas fa-play"></i> Watch Video
           </button>
-          <button class="carousel-btn carousel-next" aria-label="Next slide">
-            <i class="fas fa-chevron-right"></i>
-          </button>
-
-          <div class="carousel-dots"></div>
         </div>
       </div>
     </section>
@@ -333,6 +303,42 @@
           </div>
         </div>
       </div>
+      <!-- Carousel Section -->
+      <section class="carousel-section">
+        <div class="container">
+          <div class="carousel-container">
+            <div class="carousel-wrapper">
+              <div class="carousel-slide active">
+                <img src="carousel1.jpg" alt="Driving School Image 1" />
+              </div>
+              <div class="carousel-slide">
+                <img src="carousel2.jpg" alt="Driving School Image 2" />
+              </div>
+              <div class="carousel-slide">
+                <img src="carousel3.jpg" alt="Driving School Image 3" />
+              </div>
+              <div class="carousel-slide">
+                <img src="carousel4.jpg" alt="Driving School Image 4" />
+              </div>
+              <div class="carousel-slide">
+                <img src="carousel5.jpg" alt="Driving School Image 5" />
+              </div>
+            </div>
+
+            <button
+              class="carousel-btn carousel-prev"
+              aria-label="Previous slide"
+            >
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="carousel-btn carousel-next" aria-label="Next slide">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+
+            <div class="carousel-dots"></div>
+          </div>
+        </div>
+      </section>
     </section>
 
     <!-- Contact Section -->
@@ -397,6 +403,26 @@
       </div>
     </footer>
 
+    <!-- Video Modal -->
+    <div class="video-modal" id="videoModal">
+      <div class="video-modal-overlay"></div>
+      <div class="video-modal-content">
+        <button class="video-modal-close" id="closeModal">
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="video-modal-container">
+          <iframe
+            id="videoFrame"
+            src=""
+            title="Creation Driving School Video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          >
+          </iframe>
+        </div>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

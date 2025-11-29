@@ -403,3 +403,98 @@ if (document.readyState === 'loading') {
 } else {
   carousel.init()
 }
+// Hero Background Carousel
+const heroCarousel = {
+  slides: document.querySelectorAll('.hero-slide'),
+  currentSlide: 0,
+  autoplayInterval: null,
+  autoplayDelay: 4000,
+
+  init() {
+    if (!this.slides.length) return
+
+    // Show first slide
+    this.showSlide(0)
+
+    // Start autoplay
+    this.startAutoplay()
+  },
+
+  showSlide(index) {
+    // Remove active class from all slides
+    this.slides.forEach((slide) => slide.classList.remove('active'))
+
+    // Add active class to current slide
+    this.slides[index].classList.add('active')
+
+    this.currentSlide = index
+  },
+
+  nextSlide() {
+    let next = this.currentSlide + 1
+    if (next >= this.slides.length) next = 0
+    this.showSlide(next)
+  },
+
+  startAutoplay() {
+    this.autoplayInterval = setInterval(() => {
+      this.nextSlide()
+    }, this.autoplayDelay)
+  },
+
+  stopAutoplay() {
+    if (this.autoplayInterval) {
+      clearInterval(this.autoplayInterval)
+      this.autoplayInterval = null
+    }
+  },
+}
+
+// Initialize hero carousel when DOM is loaded
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => heroCarousel.init())
+} else {
+  heroCarousel.init()
+}
+
+// Video Modal Functionality
+const videoModal = document.getElementById('videoModal')
+const watchVideoBtn = document.getElementById('watchVideoBtn')
+const closeModal = document.getElementById('closeModal')
+const videoFrame = document.getElementById('videoFrame')
+const videoURL = 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1'
+
+// Open modal
+watchVideoBtn.addEventListener('click', (e) => {
+  e.preventDefault()
+  videoModal.classList.add('active')
+  videoFrame.src = videoURL
+  document.body.style.overflow = 'hidden' // Prevent background scrolling
+})
+
+// Close modal function
+function closeVideoModal() {
+  videoModal.classList.remove('active')
+  videoFrame.src = '' // Stop video playback
+  document.body.style.overflow = '' // Restore scrolling
+}
+
+// Close modal on button click
+closeModal.addEventListener('click', closeVideoModal)
+
+// Close modal on overlay click
+videoModal.addEventListener('click', (e) => {
+  if (
+    e.target === videoModal ||
+    e.target.classList.contains('video-modal-overlay')
+  ) {
+    closeVideoModal()
+  }
+})
+
+// Close modal on ESC key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && videoModal.classList.contains('active')) {
+    closeVideoModal()
+  }
+})
